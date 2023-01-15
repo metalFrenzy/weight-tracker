@@ -14,3 +14,4 @@ The weight entries will be sorted by the newest entry, users can delete or edit 
 ![Dashboard](https://user-images.githubusercontent.com/70327788/212573778-9a112b75-f723-471f-b450-c4f4092730e2.png)
 
 ## Add Weight Screen 
+![addWeight](https://user-images.githubusercontent.com/70327788/212573875-023bbf32-fad1-4ca6-ad40-9974a834d468.png)
