@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'WeighTracker',
       theme: ThemeData(
         canvasColor: Color.fromARGB(255, 235, 174, 194),
@@ -29,6 +30,24 @@ class MyApp extends StatelessWidget {
           buttonColor: Colors.pink,
           textTheme: ButtonTextTheme.primary,
         ),
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline1: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
+              headline2: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 20,
+                color: Colors.white,
+              ),
+              bodyText1: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 14,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
       ),
       routes: {
         AddWeightForm.routeName: (context) => AddWeightForm(),

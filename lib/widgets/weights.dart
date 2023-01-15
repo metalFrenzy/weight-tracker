@@ -1,9 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Weights extends StatelessWidget {
-  const Weights({super.key});
+import '../widgets/weights_dashboard.dart';
 
+class Weights extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
@@ -13,46 +14,15 @@ class Weights extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         }
+        final userData = FirebaseAuth.instance.currentUser;
         final docs = snapshot.data!.docs;
         return ListView.builder(
           itemCount: docs.length,
-          itemBuilder: (context, index) {
-            return Card(
-              margin: const EdgeInsets.all(10),
-              elevation: 3,
-              child: ListTile(
-                  title: Text(
-                    'Your weight: ' + docs[index]['weight'],
-                  ),
-                  trailing: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      IconButton(
-                        style: IconButton.styleFrom(),
-                        icon: Icon(
-                          Icons.edit,
-                          color: Color.fromARGB(255, 241, 160, 39),
-                        ),
-                        onPressed: () async {
-                          // could not do it, i only manage to do it statically not dynamically :(
-                        },
-                      ),
-                      IconButton(
-                        icon: Icon(
-                          Icons.delete,
-                          color: Color.fromARGB(255, 215, 22, 8),
-                        ),
-                        onPressed: () async {
-                          await FirebaseFirestore.instance
-                              .collection('weights')
-                              .doc(docs[index].id)
-                              .delete();
-                        },
-                      ),
-                    ],
-                  )),
-            );
-          },
+          itemBuilder: (context, index) => WeightDashboard(
+            docs[index]['weight'],
+            docs[index].id,
+            docs[index]['userId'] == userData!.uid,
+          ),
         );
       },
       stream: FirebaseFirestore.instance
