@@ -1,16 +1,6 @@
-# weight_app
+# weight-tracker-app
 
-A new Flutter project.
+This is a simple weight tracker app I developed using flutter, Firebase Auth, and firebase firestore,
+The application lets users sign in or log in if they have an account, after the user has signed in the app shows the dashboard screen which the weight entries will be viewed, and a button on the left to add a new weight entry. The weight entries will be sorted by the newest entry, users can delete or edit the weight entries 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
