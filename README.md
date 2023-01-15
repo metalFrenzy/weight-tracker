@@ -6,7 +6,8 @@ The application lets users sign in or log in if they have an account, after the 
 The weight entries will be sorted by the newest entry, users can delete or edit the weight entries. 
 
 ## Sign Up and LogIn Screens
-![SignUp](https://user-images.githubusercontent.com/70327788/212573443-89f4aa75-4967-4e80-8380-4bf1b42c5934.png)  ![LogIn](https://user-images.githubusercontent.com/70327788/212573457-bfea80f4-ab26-4644-8a33-ea086edda1d6.png)
+![SignUp1](https://user-images.githubusercontent.com/70327788/212573603-752427b1-7233-43d0-83f4-0442be54c338.png)
+![LogIn](https://user-images.githubusercontent.com/70327788/212573457-bfea80f4-ab26-4644-8a33-ea086edda1d6.png)
 
 
 
